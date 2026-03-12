@@ -1,4 +1,7 @@
 import { useState } from "react";
+import landingImg1 from "./assets/landing_img1.png";
+import landingImg2 from "./assets/landing_img2.png";
+import landingImg3 from "./assets/landing_img3.png";
 
 const PRIMARY = "#7c3bed";
 
@@ -505,7 +508,12 @@ const styles = `
 
   /* FOOTER */
   .footer { background: #0f172a; padding: 48px 24px; color: #94a3b8; }
-  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-inner {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: clamp(16px, 4vw, 80px);
+  padding-right: clamp(16px, 4vw, 80px);
+}
   .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; }
   @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
@@ -616,7 +624,7 @@ export default function SmartPM() {
               <div className="hero-img-card">
                 <img
                   className="hero-img"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkSUK7DlmSFd_7S16N52L80DCyG0JgjdE6_1Fn-Vr-qOVXZo6pNbcb0LIMo278knd5xNufHXCHVs6mVK5OsfIdU1DQgFG4tHILRFUGI8b-l54TkyQ7cDOWG4XwhuV9-lt2AFJuYZZtpeD3cdVuAMjJAKTn1pHMRzkbFIJvjXUYDTmxK99WaHl2eEGv01kaSass3wrAunLypZRJcyC44_NLc4fMAXlFOjNQc9QRMCmhdE0ZOdmtmJBPoOh-vmowFV-XSFuvSeTo88nf"
+                  src={landingImg1}
                   alt="SmartPM Dashboard"
                 />
               </div>
@@ -796,13 +804,13 @@ export default function SmartPM() {
                   quote: "\"SmartPM transformed our development cycle. We've seen a 30% increase in sprint velocity within just two months.\"",
                   name: "Sarah Jenkins",
                   title: "Head of Product, TechStream",
-                  avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDP3esRJ81GBFWwysFc2vYGIHVuubpinyXaZLx3kyV3rxgB3lwqLF8JG-fBzbVwXSgjzSLoJzbDravtafI5--JedNFDwW9pEv6SkRCpOpbtPlAo1isZqbGTt6Ej8nmIpVf0Cf5z2aQyFk9-siXJRNf06cDlfnQjClNMLjQEA4iAIQHbRAusPg5_OaXg88wZhhVnX0MjAFQlo7xojFfu-5wkX6Skwcy4FZ_KpZYxdUE44yiz7vDhvppqa7Bqx-fYcT0LiqKEIhMnQEEv"
+                  avatar: landingImg2
                 },
                 {
                   quote: "\"The analytics are unparalleled. I can finally see where our bottlenecks are and fix them before they become issues.\"",
                   name: "Marcus Chen",
                   title: "COO, GlobalOps",
-                  avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCt4widkKs7XUBrO8OVlH4m02neFwCQZzr-UZPY4zsRzcVjboF-o9-DslX3oeSCaYatEkxHwxE1B2jqGKtnMCDQY-6y0e4pS2-iM0D8FdsO4oL8YgNEBZZQqO8IMtp-H2F9Khsey7ATxPxSqZic_U-WdKa-OOC34mdKWElNrw-iEcn071X3gakAT6nbEyaF_DUxUKxaPiJLJdJH6UVwZn4vjUol45APucGM2QNtQNcHzAYD5-8fnDsxIVRJVB6P7IYPJN1rjqpvQfGy"
+                  avatar: landingImg3
                 }
               ].map(t => (
                 <div className="testimonial-card" key={t.name}>
