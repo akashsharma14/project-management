@@ -1,11 +1,11 @@
 import { useState } from "react";
-import kabanImg from "./assets/kanban_img.png";
-import kabanImg1 from "./assets/kanban_img1.png";
-import kabanImg2 from "./assets/kanban_img2.png";
-import kabanImg3 from "./assets/kanban_img3.png";
-import kabanImg4 from "./assets/kanban_img4.png";
-import kabanImg5 from "./assets/kanban_img5.png";
-import kabanImg6 from "./assets/kanban_img6.png";
+import kabanImg from "../assets/kanban_img.png";
+import kabanImg1 from "../assets/kanban_img1.png";
+import kabanImg2 from "../assets/kanban_img2.png";
+import kabanImg3 from "../assets/kanban_img3.png";
+import kabanImg4 from "../assets/kanban_img4.png";
+import kabanImg5 from "../assets/kanban_img5.png";
+import kabanImg6 from "../assets/kanban_img6.png";
 
 
 

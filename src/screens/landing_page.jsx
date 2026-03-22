@@ -1,7 +1,8 @@
 import { useState } from "react";
-import landingImg1 from "./assets/landing_img1.png";
-import landingImg2 from "./assets/landing_img2.png";
-import landingImg3 from "./assets/landing_img3.png";
+import { useNavigate } from "react-router-dom";
+import landingImg1 from "../assets/landing_img1.png";
+import landingImg2 from "../assets/landing_img2.png";
+import landingImg3 from "../assets/landing_img3.png";
 
 const PRIMARY = "#7c3bed";
 
@@ -570,6 +571,7 @@ const tagClass = { done: "tag-done", "in-progress": "tag-prog", pending: "tag-pe
 
 export default function SmartPM() {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="smartpm-root">
@@ -592,7 +594,15 @@ export default function SmartPM() {
             </ul>
           </nav>
           <div className="nav-actions">
-            <button className="btn-login">Login</button>
+            <button
+  className="btn-login"
+  onClick={() => {
+    console.log("clicked");
+    navigate("/login");
+  }}
+>
+  Login
+</button>
             <button className="btn-signup">Sign Up</button>
           </div>
         </div>
@@ -616,7 +626,9 @@ export default function SmartPM() {
                 with our intuitive platform designed for the modern workplace.
               </p>
               <div className="hero-btns">
-                <button className="btn-primary">Get Started</button>
+                <button className="btn-primary" onClick={() => navigate("/login")}>
+  Get Started
+</button>
                 <button className="btn-outline">Watch Demo</button>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import profileImg1 from "./assets/profile_img1.png";
-import profileImg2 from "./assets/profile_img2.png";
+import profileImg1 from "../assets/profile_img1.png";
+import profileImg2 from "../assets/profile_img2.png";
 const PRIMARY = "#7c3bed";
 
 const styles = `

@@ -1,11 +1,13 @@
 import { useState } from "react";
-import dashboardImg1 from "./assets/dashboard_img1.png";
-import dashboardImg2 from "./assets/dashboard_img2.png";
-import dashboardImg3 from "./assets/dashboard_img3.png";
-import dashboardImg4 from "./assets/dashboard_img4.png";
-import dashboardImg5 from "./assets/dashboard_img5.png";
-import dashboardImg6 from "./assets/dashboard_img6.png";
-import dashboardImg7 from "./assets/dashboard_img7.png";
+import { NAV_ITEMS } from "../navItems";
+import { useNavigate, useLocation } from "react-router-dom";
+import dashboardImg1 from "../assets/dashboard_img1.png";
+import dashboardImg2 from "../assets/dashboard_img2.png";
+import dashboardImg3 from "../assets/dashboard_img3.png";
+import dashboardImg4 from "../assets/dashboard_img4.png";
+import dashboardImg5 from "../assets/dashboard_img5.png";
+import dashboardImg6 from "../assets/dashboard_img6.png";
+import dashboardImg7 from "../assets/dashboard_img7.png";
 
 
 const PRIMARY = "#7c3bed";
@@ -439,21 +441,12 @@ const css = `
   .calendar-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
 `;
 
-const NAV = [
-  { icon: "dashboard", label: "Dashboard", active: true, filled: true },
-  { icon: "work", label: "Projects" },
-  { icon: "task_alt", label: "Tasks" },
-  { icon: "group", label: "Team" },
-  { icon: "notifications", label: "Notifications" },
-  { icon: "settings", label: "Settings" },
-];
-
 const TEAM_AVATARS = [
     dashboardImg2,
     dashboardImg3,
     dashboardImg4
 ];
-3
+
 const ACTIVITIES = [
   {
     avatar: dashboardImg5,
@@ -518,6 +511,8 @@ function renderText(parts) {
 
 export default function SmartPMDashboard() {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="dash-root">
@@ -536,12 +531,22 @@ export default function SmartPMDashboard() {
         </div>
 
         <nav className="sidebar-nav">
-          {NAV.map(({ icon, label, active, filled }) => (
-            <button key={label} className={`nav-link${active ? " active" : ""}`}>
-              <span className={`mso${active && filled ? " mso-filled" : ""}`}>{icon}</span>
-              {label}
-            </button>
-          ))}
+          {NAV_ITEMS.map(({ icon, label, path }) => {
+  const isActive = location.pathname === path;
+
+  return (
+    <button
+      key={label}
+      className={`nav-link${isActive ? " active" : ""}`}
+      onClick={() => navigate(path)}
+    >
+      <span className={`mso${isActive ? " mso-filled" : ""}`}>
+        {icon}
+      </span>
+      {label}
+    </button>
+  );
+})}
         </nav>
 
         <div className="sidebar-upgrade">

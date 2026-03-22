@@ -1,9 +1,9 @@
 import { useState } from "react";
-import teamImg1 from "./assets/team_img1.png";
-import teamImg2 from "./assets/team_img2.png";
-import teamImg3 from "./assets/team_img3.png";
-import teamImg4 from "./assets/team_img4.png";
-import teamImg5 from "./assets/team_img5.png";
+import teamImg1 from "../assets/team_img1.png";
+import teamImg2 from "../assets/team_img2.png";
+import teamImg3 from "../assets/team_img3.png";
+import teamImg4 from "../assets/team_img4.png";
+import teamImg5 from "../assets/team_img5.png";
 
 const PRIMARY = "#7c3bed";
 

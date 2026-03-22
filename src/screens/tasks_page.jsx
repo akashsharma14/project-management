@@ -1,6 +1,6 @@
 import { useState } from "react";
-import tasksImg1 from "./assets/tasks_img1.png";
-import tasksImg2 from "./assets/tasks_img2.png";
+import tasksImg1 from "../assets/tasks_img1.png";
+import tasksImg2 from "../assets/tasks_img2.png";
 
 
 const PRIMARY = "#7c3bed";
