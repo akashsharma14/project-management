@@ -322,7 +322,7 @@ function StatusCell({ status }) {
   );
 }
 
-export default function SmartPMTeam() {
+export default function TeamManagement() {
   const [search, setSearch] = useState("");
   const [roleFilter, setRoleFilter] = useState("All Roles");
   const [currentPage, setCurrentPage] = useState(1);

@@ -424,7 +424,7 @@ const NAV_ITEMS = [
 
 const TABS = ["Profile", "Notification Preferences", "Workspace Settings", "Integrations"];
 
-export default function SmartPMSettings() {
+export default function ProfileSettings() {
   const [activeTab, setActiveTab] = useState("Profile");
   const [checks, setChecks] = useState({ tasks: true, mentions: true, updates: false });
   const [formData, setFormData] = useState({

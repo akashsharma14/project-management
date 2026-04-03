@@ -505,7 +505,7 @@ function KanbanColumn({ col }) {
   );
 }
 
-export default function App() {
+export default function KanbanPage() {
   const [search, setSearch] = useState("");
 
   return (

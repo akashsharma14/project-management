@@ -319,7 +319,7 @@ const ACTIVITY = [
   { dot: "dot-gray",    text: <><strong>System</strong> created the task</>,                                  time: "Oct 15 at 09:00 AM" },
 ];
 
-export default function SmartPMTaskDetail() {
+export default function TaskPage() {
   const [comment, setComment] = useState("");
   const [search, setSearch] = useState("");
 

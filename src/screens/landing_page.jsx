@@ -569,7 +569,7 @@ const workflowRows = [
 
 const tagClass = { done: "tag-done", "in-progress": "tag-prog", pending: "tag-pend" };
 
-export default function SmartPM() {
+export default function LandingPage() {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 

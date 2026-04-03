@@ -469,7 +469,7 @@ function ProjectCard({ project }) {
   );
 }
 
-export default function App() {
+export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All Projects");
   const [activeView, setActiveView] = useState("grid");
   const [search, setSearch] = useState("");

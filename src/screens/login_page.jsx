@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function LoginPage() {
     const navigate = useNavigate();
   return (
     <div className="bg-background text-on-surface min-h-screen flex flex-col items-center justify-center p-4 font-body">

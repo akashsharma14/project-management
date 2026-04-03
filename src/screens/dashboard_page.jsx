@@ -509,7 +509,7 @@ function renderText(parts) {
   });
 }
 
-export default function SmartPMDashboard() {
+export default function DashboardPage() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
